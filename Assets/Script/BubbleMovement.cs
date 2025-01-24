@@ -3,6 +3,7 @@ using UnityEngine;
 public class BubbleMovement : MonoBehaviour
 {
     public float baseSpeed = 5f;
+    public float friction = 0.5f;
     public float gravityFactor = 2f;
     public bool isPlayerOne = true;
     public Transform otherPlayer; 
@@ -19,11 +20,12 @@ public class BubbleMovement : MonoBehaviour
     void Update()
     {
         bubbleSize = transform.localScale.x;
+        float autoVertical = (bubbleSize - 1f) * friction;
 
         float horizontal = isPlayerOne ? Input.GetAxisRaw("Horizontal") : Input.GetAxisRaw("Horizontal2");
         float vertical = isPlayerOne ? Input.GetAxisRaw("Vertical") : Input.GetAxisRaw("Vertical2");
 
-        Vector2 movement = new Vector2(horizontal, AdjustVerticalSpeed(vertical));
+        Vector2 movement = new Vector2(horizontal, AdjustVerticalSpeed(vertical) + autoVertical);
 
         /*if (Mathf.Abs(horizontal) > 0.1f)
         {
