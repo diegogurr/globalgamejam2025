@@ -3,51 +3,53 @@ using UnityEngine;
 public class BubbleShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public Transform shootPoint;
     public float shootForce = 10f;
     public float sizeChangeAmount = 0.1f;
     public float minSize = 0.5f;
     public float maxSize = 2f;
 
     private float currentSize = 1f;
-    private bool isPlayerOne;
+    private BubbleMovement movement;
+    private Collider2D playerCollider;
 
     void Start()
     {
-        isPlayerOne = GetComponent<BubbleMovement>().isPlayerOne;
+        movement = GetComponent<BubbleMovement>();
+        playerCollider = GetComponent<Collider2D>();
         currentSize = transform.localScale.x;
     }
 
     void Update()
     {
-        if (isPlayerOne)
+        if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
+            (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Shoot();
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.RightControl))
-            {
-                Shoot();
-            }
+            Shoot();
         }
     }
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        Vector2 shootDirection = movement.GetLastDirection();
+        shootDirection.y = 0;
+        shootDirection.Normalize();
 
-        Vector2 shootDirection = isPlayerOne ? Vector2.right : Vector2.left;
+        Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
+
+        GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * shootForce;
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-        if (bulletScript)
+        if (bulletScript != null)
         {
             bulletScript.SetOwner(this);
+        }
+
+        Collider2D bulletCollider = bullet.GetComponent<Collider2D>();
+        if (bulletCollider != null && playerCollider != null)
+        {
+            Physics2D.IgnoreCollision(bulletCollider, playerCollider);
         }
 
         ChangeBubbleSize(-sizeChangeAmount);

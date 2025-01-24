@@ -15,15 +15,15 @@ public class Bullet : MonoBehaviour
         owner = shooter;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Bubble"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            BubbleShooting hitBubble = other.GetComponent<BubbleShooting>();
+            BubbleShooting hitBubble = other.gameObject.GetComponent<BubbleShooting>();
             if (hitBubble != null)
             {
-                hitBubble.ChangeBubbleSize(-owner.sizeChangeAmount);
-                owner.ChangeBubbleSize(owner.sizeChangeAmount);
+                hitBubble.ChangeBubbleSize(owner.sizeChangeAmount);
+                //owner.ChangeBubbleSize(owner.sizeChangeAmount);
             }
         }
 
