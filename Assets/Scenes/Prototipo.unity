@@ -526,7 +526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -6311352213680616822, guid: 58fe357d5d544bc489dd573b2156ef38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -693,9 +693,21 @@ PrefabInstance:
       value: 14.91
       objectReference: {fileID: 0}
     - target: {fileID: 8858402255052682489, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: friction
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858402255052682489, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: baseSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858402255052682489, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 1152150479}
+    - target: {fileID: 8858402255052682489, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: gravityFactor
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1172,9 +1184,21 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5555291020382584243, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: friction
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555291020382584243, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: baseSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555291020382584243, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: otherPlayer
       value: 
       objectReference: {fileID: 713932207}
+    - target: {fileID: 5555291020382584243, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: gravityFactor
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8372856784021611740, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_Name
       value: PlayerTwo
