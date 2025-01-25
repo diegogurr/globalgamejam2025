@@ -32,7 +32,12 @@ public class ObstacleSpawner : MonoBehaviour
 
         GameObject obstacle = Instantiate(prefab, spawnPos, Quaternion.identity);
         Rigidbody2D rb = obstacle.GetComponent<Rigidbody2D>();
-
+        if (direction == ObstacleDirection.RightToLeft)
+        {
+            var scale = obstacle.transform.localScale;
+            scale.x = -obstacle.transform.localScale.x;
+            obstacle.transform.localScale = scale;
+        }
         if (rb == null)
         {
             Debug.LogError("Il prefab dell'ostacolo non ha un Rigidbody2D!");

@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 654216636}
   - component: {fileID: 654216635}
   - component: {fileID: 654216634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SuddenDeathBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,6 +461,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &713932207 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 193329340018844877, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+  m_PrefabInstance: {fileID: 849803764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &726146990
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,10 +597,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2610f07726b52a7459918f213e432df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalPrefab: {fileID: 1154813061625480, guid: 558dd30cadc8e40dabe68aa1757a45c4, type: 3}
-  verticalDownPrefab: {fileID: 1154813061625480, guid: 558dd30cadc8e40dabe68aa1757a45c4, type: 3}
-  verticalUpPrefab: {fileID: 1154813061625480, guid: 558dd30cadc8e40dabe68aa1757a45c4, type: 3}
-  spawnRate: 2
+  horizontalPrefab: {fileID: 1154813061625480, guid: 6ce4ca29a8811d2469db2b7ffd35e881, type: 3}
+  verticalDownPrefab: {fileID: 1154813061625480, guid: 645f7caeeee370647a67c6e491c6be87, type: 3}
+  verticalUpPrefab: {fileID: 1154813061625480, guid: d566915c3c2ade543a6a6af827adcf17, type: 3}
+  spawnRate: 6
   obstacleSpeed: 3
   spawnRangeX: {x: -8, y: 8}
   spawnRangeY: {x: -4, y: 4}
@@ -609,7 +614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 193329340018844877, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 193329340018844877, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -687,6 +692,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 14.91
       objectReference: {fileID: 0}
+    - target: {fileID: 8858402255052682489, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 1152150479}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -901,6 +910,11 @@ PrefabInstance:
       addedObject: {fileID: 654216633}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62583bb1c1a07464c80e0cae1202fbe3, type: 3}
+--- !u!4 &1152150479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 205535802287782274, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+  m_PrefabInstance: {fileID: 1826825025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1187311517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1113,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 205535802287782274, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 205535802287782274, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1157,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5555291020382584243, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 713932207}
     - target: {fileID: 8372856784021611740, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_Name
       value: PlayerTwo
@@ -1469,7 +1487,7 @@ GameObject:
   - component: {fileID: 2062806294}
   - component: {fileID: 2062806293}
   - component: {fileID: 2062806292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SuddenDeathTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
