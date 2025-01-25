@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BozzaMenu.unity
     guid: 4612901c6e263fa49a8a5a0b9d5262e6
+  - enabled: 1
+    path: Assets/Scenes/PerDiego.unity
+    guid: 7a8fa4b6605efa64c8f9e2f224af1792
+  - enabled: 1
+    path: Assets/Scenes/BozzaOpzioni.unity
+    guid: db3987e7ccb67d344a89184326c08fb5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
