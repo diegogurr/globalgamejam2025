@@ -19,7 +19,12 @@ void OnCollisionEnter2D(Collision2D collider)
     if (collider.gameObject.tag == "Player")
     {
         bool playerOne = collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne;
-
+        if(collider.gameObject.GetComponentInChildren<BubbleMovement>().isPlayerOne)
+            collider.gameObject.GetComponentInChildren<Animator>().Play("ExplodingFishYellow");
+            else
+            collider.gameObject.GetComponentInChildren<Animator>().Play("ExplodingFishRed");
+        collider.gameObject.GetComponentInChildren<Animator>().speed =1;
+        collider.gameObject.GetComponent<BubbleMovement>().isGameEnded=true;
         winnerText.gameObject.SetActive(true);
         resetting.gameObject.SetActive(true);
         Canvas canvas = FindObjectOfType<Canvas>();
@@ -37,7 +42,7 @@ void OnCollisionEnter2D(Collision2D collider)
 
         // Ferma il tempo
         StartCoroutine(Resetting(3));
-        Time.timeScale = 0;
+        
     }
 }
     IEnumerator Resetting(float waitTime)

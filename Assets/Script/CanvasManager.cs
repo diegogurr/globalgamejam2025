@@ -21,7 +21,6 @@ public class CanvasManager : MonoBehaviour
         winnerText.gameObject.SetActive(true);
         winnerText.text=text;
         resetting.gameObject.SetActive(true);
-        Time.timeScale = 0;
         StartCoroutine(Resetting(3));
     }
     IEnumerator Resetting(float waitTime)

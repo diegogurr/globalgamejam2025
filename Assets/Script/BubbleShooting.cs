@@ -25,12 +25,18 @@ public class BubbleShooting : MonoBehaviour
         
         childAnimator = gameObject.GetComponentInChildren<Animator>();
 
-            childAnimator.speed = 0;
+            childAnimator.speed = 1;
         canvas = FindObjectOfType<Canvas>();
 
         movement = GetComponent<BubbleMovement>();
         playerCollider = GetComponent<Collider2D>();
-        currentSize = transform.localScale.x;
+        currentSize = transform.localScale.x;            
+        if(movement.isPlayerOne)
+        childAnimator.Play("FishSwimmingYellow");
+        else
+        childAnimator.Play("FishSwimmingRed");
+
+
     }
 
     void Update()
@@ -52,7 +58,7 @@ public class BubbleShooting : MonoBehaviour
         Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
 
         GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
-        bullet.transform.localScale=transform.localScale * currentSize/2;
+        bullet.transform.localScale=transform.localScale * currentSize/5;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * shootForce;
 
@@ -73,14 +79,18 @@ public class BubbleShooting : MonoBehaviour
     
     public void ChangeBubbleSize(float amount)
     {
-                    childAnimator.speed =0;
+                    childAnimator.speed =1;
 
         currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
         Debug.Log("currentSize "+ currentSize+ " maxSize "+ maxSize);
 
         if(maxSizeReached && amount>0){
-            childAnimator.Play("ExplodingFish");
+            if(movement.isPlayerOne)
+            childAnimator.Play("ExplodingFishYellow");
+            else
+            childAnimator.Play("ExplodingFishRed");
             childAnimator.speed =1;
+            movement.GetComponent<BubbleMovement>().isGameEnded=true;
             if(movement.isPlayerOne)
             canvas.GetComponent<CanvasManager>().endGame("Player two won");
             else
@@ -90,6 +100,10 @@ public class BubbleShooting : MonoBehaviour
         }else if(maxSizeReached && amount<0){
             Debug.Log("Print Diego "+ maxSizeReached + " " + amount);
             maxSizeReached=false;
+            if(movement.isPlayerOne)
+            childAnimator.Play("FishSwimmingYellow");
+            else
+            childAnimator.Play("FishSwimmingRed");
         }
         if(currentSize==maxSize){
             maxSizeReached=true;
