@@ -32,6 +32,11 @@ public class BubbleMovement : MonoBehaviour
             lastDirection = new Vector2(horizontal, 0).normalized;
         }*/
 
+        if (movement.magnitude > 1f)
+        {
+            movement = movement.normalized * Mathf.Max(Mathf.Abs(horizontal), Mathf.Abs(AdjustVerticalSpeed(vertical) + autoVertical));
+        }
+        
         rb.linearVelocity = movement * baseSpeed;
 
         RotateTowardsOtherPlayer();
