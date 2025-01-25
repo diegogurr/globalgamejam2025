@@ -11,11 +11,15 @@ public class CanvasManager : MonoBehaviour
         menuButton.gameObject.SetActive(false);
         winnerText.gameObject.SetActive(false);
         resetting.gameObject.SetActive(false);
-
-
-        
     }
     public void LoadMenu(){
         SceneManager.LoadScene(1);
+    }
+    public void endGame(){
+        
+            menuButton.gameObject.SetActive(true);
+            winnerText.gameObject.SetActive(true);
+            resetting.gameObject.SetActive(true);
+    
     }
 }

@@ -16,6 +16,7 @@ public class BubbleShooting : MonoBehaviour
     private bool canShoot=true;
     Animator childAnimator;
     bool maxSizeReached=false;
+    Canvas canvas;
     
     void Start()
     {
@@ -23,6 +24,7 @@ public class BubbleShooting : MonoBehaviour
         childAnimator = gameObject.GetComponentInChildren<Animator>();
 
             childAnimator.speed = 0;
+        canvas = FindObjectOfType<Canvas>();
 
         movement = GetComponent<BubbleMovement>();
         playerCollider = GetComponent<Collider2D>();
@@ -69,36 +71,35 @@ public class BubbleShooting : MonoBehaviour
     
     public void ChangeBubbleSize(float amount)
     {
-        if(maxSizeReached){
-            childAnimator.Play("ExplodingFish");
-            endGame();
+                    childAnimator.speed =0;
 
-
-        }
         currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
         Debug.Log("currentSize "+ currentSize+ " maxSize "+ maxSize);
+
+        if(maxSizeReached && amount>0){
+            childAnimator.Play("ExplodingFish");
+            childAnimator.speed =1;
+
+            canvas.GetComponent<CanvasManager>().endGame();
+
+
+        }else if(maxSizeReached && amount<0){
+            Debug.Log("Print Diego "+ maxSizeReached + " " + amount);
+            maxSizeReached=false;
+        }
         if(currentSize==maxSize){
             maxSizeReached=true;
             childAnimator.Play("SizeLimit");
 
             childAnimator.speed =1;
 
-        }else{
-            childAnimator.speed = 0;
-            maxSizeReached=false;
         }
-
+        
         canShoot = !Mathf.Approximately(currentSize, minSize);
         
         transform.localScale = Vector3.one * currentSize;
     }
-    void endGame(){
-            Canvas canvas = FindObjectOfType<Canvas>();
-            CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
-            canvasManager.menuButton.gameObject.SetActive(true);
-            canvasManager.winnerText.gameObject.SetActive(true);
-            canvasManager.resetting.gameObject.SetActive(true);
-    }
+    
 }
 /* particellare
 using UnityEngine;
