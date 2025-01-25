@@ -12,6 +12,7 @@ public class BubbleMovement : MonoBehaviour
     private float bubbleSize = 1f;
     private Vector2 lastDirection = Vector2.right;
     private float startXScale;
+    public bool isGameEnded=false;
     
     void Start()
     {
@@ -21,7 +22,8 @@ public class BubbleMovement : MonoBehaviour
 
     void Update()
     {
-        bubbleSize = transform.localScale.x;
+        if(!isGameEnded){
+            bubbleSize = transform.localScale.x;
         float autoVertical = (bubbleSize - startXScale) * friction;
 
         float horizontal = isPlayerOne ? Input.GetAxisRaw("Horizontal") : Input.GetAxisRaw("Horizontal2");
@@ -42,6 +44,8 @@ public class BubbleMovement : MonoBehaviour
         rb.linearVelocity = movement * baseSpeed;
 
         RotateTowardsOtherPlayer();
+        }else{rb.linearVelocity=Vector3.zero;}
+        
     }
 
     private float AdjustVerticalSpeed(float input)
