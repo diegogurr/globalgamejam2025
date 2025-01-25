@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: 352b3242e4fed9a42ba8fa26bc048e1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 913837981822068275
+    second: explosion_fish_yellow_0
+  - first:
+      213: -698591062730198418
+    second: explosion_fish_yellow_1
+  - first:
+      213: -1440545549164849588
+    second: explosion_fish_yellow_2
+  - first:
+      213: 7543062199780236458
+    second: explosion_fish_yellow_3
+  - first:
+      213: -8112793643417016304
+    second: explosion_fish_yellow_4
+  - first:
+      213: 3646578455641221102
+    second: explosion_fish_yellow_5
+  - first:
+      213: 8457626481331422434
+    second: explosion_fish_yellow_6
+  - first:
+      213: -7905450211220629793
+    second: explosion_fish_yellow_7
+  - first:
+      213: -1228344716852016318
+    second: explosion_fish_yellow_8
+  - first:
+      213: 1436452067258297564
+    second: explosion_fish_yellow_9
+  - first:
+      213: -8010841503458845144
+    second: explosion_fish_yellow_10
+  - first:
+      213: 4780753960101593011
+    second: explosion_fish_yellow_11
+  - first:
+      213: 1656524082521848393
+    second: explosion_fish_yellow_12
+  - first:
+      213: -2161841680437260827
+    second: explosion_fish_yellow_13
+  - first:
+      213: 2080024405453627736
+    second: explosion_fish_yellow_14
+  - first:
+      213: 6909310894549400632
+    second: explosion_fish_yellow_15
+  - first:
+      213: -9198615911071992163
+    second: explosion_fish_yellow_16
+  - first:
+      213: 5525746892558792346
+    second: explosion_fish_yellow_17
+  - first:
+      213: 551102350332010052
+    second: explosion_fish_yellow_18
+  - first:
+      213: -8591466847204266592
+    second: explosion_fish_yellow_19
+  - first:
+      213: 3221437385289391263
+    second: explosion_fish_yellow_20
+  - first:
+      213: 6796781185219366602
+    second: explosion_fish_yellow_21
+  - first:
+      213: 4318415881297327988
+    second: explosion_fish_yellow_22
+  - first:
+      213: 3294067883752040366
+    second: explosion_fish_yellow_23
+  - first:
+      213: -4277889917847828351
+    second: explosion_fish_yellow_24
+  - first:
+      213: 5404687459562708705
+    second: explosion_fish_yellow_25
+  - first:
+      213: 213498213688747816
+    second: explosion_fish_yellow_26
+  - first:
+      213: 5590705017808950597
+    second: explosion_fish_yellow_27
+  - first:
+      213: 1366765003961195423
+    second: explosion_fish_yellow_28
+  - first:
+      213: 7293897336713256733
+    second: explosion_fish_yellow_29
+  - first:
+      213: -7428572987465045715
+    second: explosion_fish_yellow_30
+  - first:
+      213: -3890028248221928072
+    second: explosion_fish_yellow_31
+  - first:
+      213: 6087125238191320900
+    second: explosion_fish_yellow_32
+  - first:
+      213: 8847701296032150238
+    second: explosion_fish_yellow_33
+  - first:
+      213: -8563107254705084393
+    second: explosion_fish_yellow_34
+  - first:
+      213: -3980086733568154381
+    second: explosion_fish_yellow_35
+  - first:
+      213: 2512943817888900652
+    second: explosion_fish_yellow_36
+  - first:
+      213: 6826173411906950851
+    second: explosion_fish_yellow_37
+  - first:
+      213: -6114930319292878170
+    second: explosion_fish_yellow_38
+  - first:
+      213: -7791964288547404403
+    second: explosion_fish_yellow_39
+  - first:
+      213: 1254036549853235010
+    second: explosion_fish_yellow_40
+  - first:
+      213: -2428345653588161373
+    second: explosion_fish_yellow_41
+  - first:
+      213: -3425489727874775814
+    second: explosion_fish_yellow_42
+  - first:
+      213: 154741849332328479
+    second: explosion_fish_yellow_43
+  - first:
+      213: -6936733953898663628
+    second: explosion_fish_yellow_44
+  - first:
+      213: -883333944618679124
+    second: explosion_fish_yellow_45
+  - first:
+      213: 492833064169017735
+    second: explosion_fish_yellow_46
+  - first:
+      213: -2781100778722794108
+    second: explosion_fish_yellow_47
+  - first:
+      213: 1908197965014554982
+    second: explosion_fish_yellow_48
+  - first:
+      213: 113163286557450141
+    second: explosion_fish_yellow_49
+  - first:
+      213: 8937534080374794714
+    second: explosion_fish_yellow_50
+  - first:
+      213: 521459136806337385
+    second: explosion_fish_yellow_51
+  - first:
+      213: -278340860897632298
+    second: explosion_fish_yellow_52
+  - first:
+      213: 4175755029981131680
+    second: explosion_fish_yellow_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosion_fish_yellow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf93108163d60646b47b65237f4f6f0
+      internalID: -644615211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136ab835422f182419ccf9757ad7fd24
+      internalID: -113857629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717f2a6e6f7139e4395f2c02a4c44445
+      internalID: 1511869416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5d6dcabd15ce748a4cbe6ade7c03fd
+      internalID: -1587485022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69e4304d07c5cc499fbc2389a4da235
+      internalID: 797629614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b684778d4eb154f96e9b6a78c97ba1
+      internalID: -1207060130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6752a8d887de34585f3c30ddfd6e2d
+      internalID: 640992025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a1f8543bec7f3438486e7a3efb4f5c
+      internalID: -2120218174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6586665233fe184aa2c4eeea87a56c2
+      internalID: 1833556477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7b371b2c9ed674c8bc400991c1ecb1
+      internalID: 1700324727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_yellow_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55452acb234ae914cab0eb8b28417d15
+      internalID: -91876947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 264c56b843b2a2448a4dca1600937928
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      explosion_fish_yellow_0: -644615211
+      explosion_fish_yellow_1: -113857629
+      explosion_fish_yellow_10: -91876947
+      explosion_fish_yellow_2: 1511869416
+      explosion_fish_yellow_3: -1587485022
+      explosion_fish_yellow_4: 797629614
+      explosion_fish_yellow_5: -1207060130
+      explosion_fish_yellow_6: 640992025
+      explosion_fish_yellow_7: -2120218174
+      explosion_fish_yellow_8: 1833556477
+      explosion_fish_yellow_9: 1700324727
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

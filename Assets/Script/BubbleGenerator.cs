@@ -3,26 +3,28 @@ using UnityEngine;
 
 public class BubbleGenerator : MonoBehaviour
 {
-     public GameObject bulletPrefab;
+    public GameObject bulletPrefab;
     
     public float sizeChangeAmount = 0.1f;
-    public float minSize = 0.5f;
-    public float maxSize = 2f;
+    public float minSize = 0.1f;
+    public float maxSize = 0.5f;
+    public float minTime = 1f;
+    public float maxTime = 3f;
 
-    public float randomSize = 1f;
-    private Collider2D playerCollider;
-    private float minShootForce=1f;
-    private float maxShootForce=10f;
+    public float minShootForce = 1f;
+    public float maxShootForce = 10f;
+    public float coneAngle = 30f; // Angolo del cono di sparo in gradi
 
-    void Start(){
-       StartCoroutine(ShootBubblesRoutine());
+    void Start()
+    {
+        StartCoroutine(ShootBubblesRoutine());
     }
 
     IEnumerator ShootBubblesRoutine()
     {
         while (true)
         {
-            float randomDelay = Random.Range(1f, 5f);  
+            float randomDelay = Random.Range(minTime, maxTime);  
             yield return new WaitForSeconds(randomDelay);
 
             Shoot();
@@ -31,19 +33,17 @@ public class BubbleGenerator : MonoBehaviour
 
     void Shoot()
     {
-        // Genera dimensione e forza casuali
         float randomSize = Random.Range(minSize, maxSize);
         float randomShootForce = Random.Range(minShootForce, maxShootForce);
+        float randomAngle = Random.Range(-coneAngle / 2f, coneAngle / 2f);
 
-        Vector3 shootPosition = transform.position + Vector3.up * (randomSize * 0.6f);
+        Vector3 shootDirection = Quaternion.Euler(0, 0, randomAngle) * Vector3.up;
+        Vector3 shootPosition = transform.position + shootDirection * randomSize;
         GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
 
         bullet.transform.localScale = Vector3.one * randomSize;
-        
+
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = Vector3.up * randomShootForce;
-
-        Collider2D bulletCollider = bullet.GetComponent<Collider2D>();
+        rb.linearVelocity = shootDirection * randomShootForce;
     }
-
 }

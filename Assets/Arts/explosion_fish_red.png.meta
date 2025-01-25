@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: 9f29a8c7ed205574c9f16e8fa5f1d002
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6795057426878051663
+    second: explosion_fish_red_0
+  - first:
+      213: -8357054129028493036
+    second: explosion_fish_red_1
+  - first:
+      213: 5218738006178776075
+    second: explosion_fish_red_2
+  - first:
+      213: 5798880764505809089
+    second: explosion_fish_red_3
+  - first:
+      213: 7518220975782407152
+    second: explosion_fish_red_4
+  - first:
+      213: 7836475755546991429
+    second: explosion_fish_red_5
+  - first:
+      213: -4508605789565861587
+    second: explosion_fish_red_6
+  - first:
+      213: -7661190797557715573
+    second: explosion_fish_red_7
+  - first:
+      213: -2967576428101681950
+    second: explosion_fish_red_8
+  - first:
+      213: -5761037495816124801
+    second: explosion_fish_red_9
+  - first:
+      213: 6162344306913129666
+    second: explosion_fish_red_10
+  - first:
+      213: 888421284392135345
+    second: explosion_fish_red_11
+  - first:
+      213: -1319936766942013680
+    second: explosion_fish_red_12
+  - first:
+      213: -6286909099707506915
+    second: explosion_fish_red_13
+  - first:
+      213: 2665763887173543321
+    second: explosion_fish_red_14
+  - first:
+      213: 487417252420877156
+    second: explosion_fish_red_15
+  - first:
+      213: 4046452985931840681
+    second: explosion_fish_red_16
+  - first:
+      213: 8154357457952877707
+    second: explosion_fish_red_17
+  - first:
+      213: 651851431896893310
+    second: explosion_fish_red_18
+  - first:
+      213: 7925682675254228007
+    second: explosion_fish_red_19
+  - first:
+      213: -6409628422906290685
+    second: explosion_fish_red_20
+  - first:
+      213: 8988754101130670785
+    second: explosion_fish_red_21
+  - first:
+      213: -4921506206583800165
+    second: explosion_fish_red_22
+  - first:
+      213: -5302024731298028740
+    second: explosion_fish_red_23
+  - first:
+      213: -943350961348376038
+    second: explosion_fish_red_24
+  - first:
+      213: 5534631463931724386
+    second: explosion_fish_red_25
+  - first:
+      213: -8058212945698347608
+    second: explosion_fish_red_26
+  - first:
+      213: 4298911211682652168
+    second: explosion_fish_red_27
+  - first:
+      213: -1664791250281578588
+    second: explosion_fish_red_28
+  - first:
+      213: 1495941255283016456
+    second: explosion_fish_red_29
+  - first:
+      213: 2889555386276292903
+    second: explosion_fish_red_30
+  - first:
+      213: 7127362460622825811
+    second: explosion_fish_red_31
+  - first:
+      213: -8239559584271136253
+    second: explosion_fish_red_32
+  - first:
+      213: -779992370651221968
+    second: explosion_fish_red_33
+  - first:
+      213: -3426139616397989907
+    second: explosion_fish_red_34
+  - first:
+      213: -2088769521196854240
+    second: explosion_fish_red_35
+  - first:
+      213: 8558181039321797161
+    second: explosion_fish_red_36
+  - first:
+      213: 8392044866519328499
+    second: explosion_fish_red_37
+  - first:
+      213: -1463353155050219338
+    second: explosion_fish_red_38
+  - first:
+      213: -8690524887220297592
+    second: explosion_fish_red_39
+  - first:
+      213: 5699522803346550796
+    second: explosion_fish_red_40
+  - first:
+      213: 2115799346098336607
+    second: explosion_fish_red_41
+  - first:
+      213: -8141545656778987625
+    second: explosion_fish_red_42
+  - first:
+      213: -8224559858171162406
+    second: explosion_fish_red_43
+  - first:
+      213: 3623984073650441013
+    second: explosion_fish_red_44
+  - first:
+      213: -716344624773051549
+    second: explosion_fish_red_45
+  - first:
+      213: 6701235011871307191
+    second: explosion_fish_red_46
+  - first:
+      213: -6298052319689282524
+    second: explosion_fish_red_47
+  - first:
+      213: -4478444744474797445
+    second: explosion_fish_red_48
+  - first:
+      213: 1644865258997057476
+    second: explosion_fish_red_49
+  - first:
+      213: 4629101569974947324
+    second: explosion_fish_red_50
+  - first:
+      213: -5451750444946038242
+    second: explosion_fish_red_51
+  - first:
+      213: -4911750750888684830
+    second: explosion_fish_red_52
+  - first:
+      213: 5640612409389998512
+    second: explosion_fish_red_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explosion_fish_red_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9290866b43196714caab60038e347a94
+      internalID: 598057573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83575d0dabcfad64290c1fe9d7c949e8
+      internalID: 1113973557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b3e70c2a9c8ea40a6118a1d33de908
+      internalID: 472356712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d1c0eb59d8b774781054057b44786b
+      internalID: -661229694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d5e77c246f24b4d8f534c4f64a70af
+      internalID: -733977850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7e7295e46cd52488d6d968c67bf631
+      internalID: 1548471369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b054317ba007cf4a953ea9e6f1cd762
+      internalID: -975744269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f2526898ac89e4fa9e2b1f3103f32c
+      internalID: -977820040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17522d2fba41650439e1456264673d2d
+      internalID: -1160292241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8296d71c11969774b8c50e0e3cd8d7c8
+      internalID: -1989074635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_fish_red_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 120
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8330efe855018144af468bc47c431c1
+      internalID: 1807780017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 084dd27534a3f9c4393f01237e2aca67
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      explosion_fish_red_0: 598057573
+      explosion_fish_red_1: 1113973557
+      explosion_fish_red_10: 1807780017
+      explosion_fish_red_2: 472356712
+      explosion_fish_red_3: -661229694
+      explosion_fish_red_4: -733977850
+      explosion_fish_red_5: 1548471369
+      explosion_fish_red_6: -975744269
+      explosion_fish_red_7: -977820040
+      explosion_fish_red_8: -1160292241
+      explosion_fish_red_9: -1989074635
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,4 +1,5 @@
 using System;
+using Unity.Collections;
 using UnityEngine;
 
 public class BubbleShooting : MonoBehaviour
@@ -13,9 +14,16 @@ public class BubbleShooting : MonoBehaviour
     private BubbleMovement movement;
     private Collider2D playerCollider;
     private bool canShoot=true;
+    Animator childAnimator;
+    bool maxSizeReached=false;
     
     void Start()
     {
+        
+        childAnimator = gameObject.GetComponentInChildren<Animator>();
+
+            childAnimator.speed = 0;
+
         movement = GetComponent<BubbleMovement>();
         playerCollider = GetComponent<Collider2D>();
         currentSize = transform.localScale.x;
@@ -61,12 +69,34 @@ public class BubbleShooting : MonoBehaviour
     
     public void ChangeBubbleSize(float amount)
     {
+        if(maxSizeReached){
+            childAnimator.Play("ExplodingFish");
+            Canvas canvas = FindObjectOfType<Canvas>();
+            CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
+            canvasManager.menuButton.gameObject.SetActive(true);
+            canvasManager.winnerText.gameObject.SetActive(true);
+            canvasManager.resetting.gameObject.SetActive(true);
+
+
+        }
         currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
+        Debug.Log("currentSize "+ currentSize+ " maxSize "+ maxSize);
+        if(currentSize==maxSize){
+            maxSizeReached=true;
+            childAnimator.Play("SizeLimit");
+
+            childAnimator.speed =1;
+
+        }else{
+            childAnimator.speed = 0;
+            maxSizeReached=false;
+        }
 
         canShoot = !Mathf.Approximately(currentSize, minSize);
         
         transform.localScale = Vector3.one * currentSize;
     }
+
 }
 /* particellare
 using UnityEngine;
