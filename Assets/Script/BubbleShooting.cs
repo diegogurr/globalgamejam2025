@@ -6,7 +6,7 @@ public class BubbleShooting : MonoBehaviour
     public float shootForce = 10f;
     public float sizeChangeAmount = 0.1f;
     public float minSize = 0.5f;
-    public float maxSize = 2f;
+    public float maxSize = 2f;z
 
     private float currentSize = 1f;
     private BubbleMovement movement;

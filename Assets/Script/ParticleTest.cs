@@ -14,8 +14,5 @@ public class ParticleTest : MonoBehaviour
         if (other.tag == "Player")
             Debug.Log(other.tag);
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        Debug.Log(other.gameObject.name);
-    }
+
 }

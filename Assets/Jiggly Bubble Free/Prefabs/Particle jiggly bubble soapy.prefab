@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4000013416627882
 Transform:
   m_ObjectHideFlags: 0
@@ -4869,6 +4869,7 @@ GameObject:
   - component: {fileID: 4000010731693402}
   - component: {fileID: 198000010118446818}
   - component: {fileID: 199000011340400198}
+  - component: {fileID: 6522135764521711535}
   m_Layer: 0
   m_Name: Particle jiggly bubble soapy
   m_TagString: Untagged
@@ -9686,3 +9687,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6522135764521711535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012696881832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6879d7feeabf48c40ac7d427cc87ade8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 0}
