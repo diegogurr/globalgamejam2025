@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Explosion
   - SuddenDeath
+  - Obstacle
   layers:
   - Default
   - TransparentFX

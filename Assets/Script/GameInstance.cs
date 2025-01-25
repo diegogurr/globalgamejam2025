@@ -23,7 +23,7 @@ public class GameInstance : MonoBehaviour
         SpawnObjects(bombBubble, Random.Range(1, 7), placedPositions);
 
         // Instanzia gli obstacle
-        SpawnObjects(obstacle, Random.Range(1, 7), placedPositions);
+        //SpawnObjects(obstacle, Random.Range(1, 7), placedPositions);
 
         StartCoroutine(WaitForSuddenDeath(3));
 
