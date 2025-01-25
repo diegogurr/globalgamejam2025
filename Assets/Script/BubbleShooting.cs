@@ -12,7 +12,8 @@ public class BubbleShooting : MonoBehaviour
     public  float currentSize = 1f;
     private BubbleMovement movement;
     private Collider2D playerCollider;
-
+    private bool canShoot=true;
+    
     void Start()
     {
         movement = GetComponent<BubbleMovement>();
@@ -25,7 +26,8 @@ public class BubbleShooting : MonoBehaviour
         if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
             (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
         {
-            Shoot();
+            if(canShoot)
+                Shoot();
         }
     }
 
@@ -59,10 +61,10 @@ public class BubbleShooting : MonoBehaviour
     
     public void ChangeBubbleSize(float amount)
     {
-        Debug.Log(amount);
-        
         currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
-        Debug.Log("valore size" +currentSize );
+
+        canShoot = !Mathf.Approximately(currentSize, minSize);
+        
         transform.localScale = Vector3.one * currentSize;
     }
 }
