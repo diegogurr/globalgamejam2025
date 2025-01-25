@@ -21,6 +21,9 @@ public class BubbleShooting : MonoBehaviour
     Canvas canvas;
     private Rigidbody2D rb;
     
+    public float fireRate = 0.5f;
+    private float nextFireTime = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,9 +48,13 @@ public class BubbleShooting : MonoBehaviour
         if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
             (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
         {
-            if(canShoot&&!movement.isGameEnded)
+            if (canShoot && !movement.isGameEnded && Time.time >= nextFireTime)
+            {
                 Shoot();
+                nextFireTime = Time.time + fireRate;
+            }
         }
+
     }
 
     void Shoot()
@@ -83,7 +90,6 @@ public class BubbleShooting : MonoBehaviour
                     childAnimator.speed =1;
 
         currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
-        Debug.Log("currentSize "+ currentSize+ " maxSize "+ maxSize);
 
         if(maxSizeReached && amount>0){
             if(movement.isPlayerOne)
@@ -92,6 +98,7 @@ public class BubbleShooting : MonoBehaviour
             childAnimator.Play("ExplodingFishRed");
             
             CameraShake.instance.Shake(0.5f, 0.1f);
+            AudioManager.instance.PlaySoundSFX("Explosion");
 
             childAnimator.speed =1;
             movement.GetComponent<BubbleMovement>().isGameEnded=true;
@@ -102,7 +109,7 @@ public class BubbleShooting : MonoBehaviour
 
 
         }else if(maxSizeReached && amount<0){
-            Debug.Log("Print Diego "+ maxSizeReached + " " + amount);
+
             maxSizeReached=false;
             if(movement.isPlayerOne)
             childAnimator.Play("FishSwimmingYellow");
@@ -124,58 +131,3 @@ public class BubbleShooting : MonoBehaviour
     }
       
 }
-/* particellare
-using UnityEngine;
-
-public class BubbleShooting : MonoBehaviour
-{
-    public ParticleSystem shootParticleSystem;
-    public float sizeChangeAmount = 0.1f;
-    public float minSize = 0.5f;
-    public float maxSize = 2f;
-
-    private float currentSize = 1f;
-    private BubbleMovement movement;
-    private Collider2D playerCollider;
-
-    void Start()
-    {
-        movement = GetComponent<BubbleMovement>();
-        playerCollider = GetComponent<Collider2D>();
-        currentSize = transform.localScale.x;
-    }
-
-    void Update()
-    {
-        if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
-            (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
-        {
-            Shoot();
-        }
-    }
-
-    void Shoot()
-    {
-        Vector2 shootDirection = movement.GetLastDirection();
-        shootDirection.y = 0;
-        shootDirection.Normalize();
-
-        Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
-        
-        if (shootParticleSystem != null)
-        {
-            ParticleSystem instance = Instantiate(shootParticleSystem, shootPosition, Quaternion.LookRotation(shootDirection));
-            instance.Play();
-            Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
-        }
-
-        ChangeBubbleSize(-sizeChangeAmount);
-    }
-
-    public void ChangeBubbleSize(float amount)
-    {
-        currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
-        transform.localScale = Vector3.one * currentSize;
-    }
-}
-*/

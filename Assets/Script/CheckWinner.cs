@@ -32,6 +32,7 @@ void OnCollisionEnter2D(Collision2D collider)
         canvasManager.menuButton.gameObject.SetActive(true);
 
         CameraShake.instance.Shake(0.5f, 0.1f);
+        AudioManager.instance.PlaySoundSFX("Explosion");
 
         if (playerOne)
         {

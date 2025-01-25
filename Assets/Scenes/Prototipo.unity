@@ -322,6 +322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636614692}
   - component: {fileID: 636614691}
+  - component: {fileID: 636614693}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -441,6 +442,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636614693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636614690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48caa10ffc9f2e3488a8eff763697ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 00b6ea1a4ab68d54880f9abe58549bd7, type: 3}
+    volume: 0.8
 --- !u!1 &654216632
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +821,10 @@ PrefabInstance:
     - target: {fileID: 3951211660632304534, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: m_Name
       value: PlayerOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595995581591656198, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: fireRate
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6595995581591656198, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: massFactor
@@ -1351,6 +1372,10 @@ PrefabInstance:
     - target: {fileID: 4016942474895021177, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_Offset.y
       value: 0.0029891133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250800805515891701, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: fireRate
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4250800805515891701, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: massFactor
