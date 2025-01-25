@@ -44,7 +44,7 @@ public class BubbleShooting : MonoBehaviour
         if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
             (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
         {
-            if(canShoot)
+            if(canShoot&&!movement.isGameEnded)
                 Shoot();
         }
     }

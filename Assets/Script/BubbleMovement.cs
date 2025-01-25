@@ -17,6 +17,7 @@ public class BubbleMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<Collider2D>().enabled = true;
         startXScale = transform.localScale.x;
     }
 
@@ -44,7 +45,12 @@ public class BubbleMovement : MonoBehaviour
         rb.linearVelocity = movement * baseSpeed;
 
         RotateTowardsOtherPlayer();
-        }else{rb.linearVelocity=Vector3.zero;}
+        }
+        else
+        {
+            rb.linearVelocity=Vector3.zero;
+            GetComponent<Collider2D>().enabled = false;
+        }
         
     }
 
