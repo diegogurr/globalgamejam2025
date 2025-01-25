@@ -5,22 +5,12 @@ using UnityEngine;
 public class MineController : MonoBehaviour {
 
 	public GameObject explosion;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.tag == "Player"){	
-			Debug.Log("Funziono " + other.gameObject.GetComponent<BubbleShooting>());
+		if(other.CompareTag("Player")){	
             
                 other.gameObject.GetComponent<BubbleShooting>().ChangeBubbleSize(1f);
 			

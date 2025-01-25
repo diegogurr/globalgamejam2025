@@ -31,6 +31,8 @@ void OnCollisionEnter2D(Collision2D collider)
         CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
         canvasManager.menuButton.gameObject.SetActive(true);
 
+        CameraShake.instance.Shake(0.5f, 0.1f);
+
         if (playerOne)
         {
             winnerText.text = "Giocatore 1 ha vinto";
@@ -48,7 +50,7 @@ void OnCollisionEnter2D(Collision2D collider)
     IEnumerator Resetting(float waitTime)
     {
         yield return new WaitForSecondsRealtime(waitTime);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 
 }

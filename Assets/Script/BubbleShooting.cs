@@ -11,7 +11,7 @@ public class BubbleShooting : MonoBehaviour
     public float sizeChangeAmount = 0.1f;
     public float minSize = 0.5f;
     public float maxSize = 2f;
-
+    public float massFactor = 500f;
     public  float currentSize = 1f;
     private BubbleMovement movement;
     private Collider2D playerCollider;
@@ -19,10 +19,11 @@ public class BubbleShooting : MonoBehaviour
     Animator childAnimator;
     bool maxSizeReached=false;
     Canvas canvas;
+    private Rigidbody2D rb;
     
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
         childAnimator = gameObject.GetComponentInChildren<Animator>();
 
             childAnimator.speed = 1;
@@ -58,7 +59,7 @@ public class BubbleShooting : MonoBehaviour
         Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
 
         GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
-        bullet.transform.localScale=transform.localScale * currentSize/5;
+        //bullet.transform.localScale=transform.localScale * currentSize/5;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * shootForce;
 
@@ -89,6 +90,9 @@ public class BubbleShooting : MonoBehaviour
             childAnimator.Play("ExplodingFishYellow");
             else
             childAnimator.Play("ExplodingFishRed");
+            
+            CameraShake.instance.Shake(0.5f, 0.1f);
+
             childAnimator.speed =1;
             movement.GetComponent<BubbleMovement>().isGameEnded=true;
             if(movement.isPlayerOne)
@@ -116,6 +120,7 @@ public class BubbleShooting : MonoBehaviour
         canShoot = !Mathf.Approximately(currentSize, minSize);
         
         transform.localScale = Vector3.one * currentSize;
+        rb.mass = currentSize*massFactor;
     }
       
 }

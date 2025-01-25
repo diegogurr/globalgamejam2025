@@ -14,7 +14,7 @@ public class CanvasManager : MonoBehaviour
         resetting.gameObject.SetActive(false);
     }
     public void LoadMenu(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
     public void endGame(string text){
         menuButton.gameObject.SetActive(true);
@@ -26,6 +26,6 @@ public class CanvasManager : MonoBehaviour
     IEnumerator Resetting(float waitTime)
     {
         yield return new WaitForSecondsRealtime(waitTime);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }

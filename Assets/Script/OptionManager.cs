@@ -80,7 +80,7 @@ public class OptionManager : MonoBehaviour
         SaveSettings(); // Salva la modifica
     }
     public void LoadMenu(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
 
