@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BubbleShooting : MonoBehaviour
 {
@@ -79,8 +81,10 @@ public class BubbleShooting : MonoBehaviour
         if(maxSizeReached && amount>0){
             childAnimator.Play("ExplodingFish");
             childAnimator.speed =1;
-
-            canvas.GetComponent<CanvasManager>().endGame();
+            if(movement.isPlayerOne)
+            canvas.GetComponent<CanvasManager>().endGame("Player two won");
+            else
+                canvas.GetComponent<CanvasManager>().endGame("Player one won");
 
 
         }else if(maxSizeReached && amount<0){
@@ -99,7 +103,7 @@ public class BubbleShooting : MonoBehaviour
         
         transform.localScale = Vector3.one * currentSize;
     }
-    
+      
 }
 /* particellare
 using UnityEngine;

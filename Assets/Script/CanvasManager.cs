@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 public class CanvasManager : MonoBehaviour
 {
         public TMP_Text winnerText; // Assegna questo campo direttamente nell'Inspector
@@ -15,11 +16,17 @@ public class CanvasManager : MonoBehaviour
     public void LoadMenu(){
         SceneManager.LoadScene(1);
     }
-    public void endGame(){
-        
-            menuButton.gameObject.SetActive(true);
-            winnerText.gameObject.SetActive(true);
-            resetting.gameObject.SetActive(true);
-    
+    public void endGame(string text){
+        menuButton.gameObject.SetActive(true);
+        winnerText.gameObject.SetActive(true);
+        winnerText.text=text;
+        resetting.gameObject.SetActive(true);
+        Time.timeScale = 0;
+        StartCoroutine(Resetting(3));
+    }
+    IEnumerator Resetting(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        SceneManager.LoadScene(0);
     }
 }
