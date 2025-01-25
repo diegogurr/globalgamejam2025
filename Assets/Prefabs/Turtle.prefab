@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 212047606833030684}
   - component: {fileID: 61044443873627052}
   - component: {fileID: 58853897332017958}
-  - component: {fileID: -8533755938265294895}
+  - component: {fileID: -8583953386255337698}
   m_Layer: 0
-  m_Name: FloatingPlatform
-  m_TagString: Obstacle
+  m_Name: Turtle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.26}
   m_Radius: 0.46
---- !u!50 &-8533755938265294895
+--- !u!50 &-8583953386255337698
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -198,4 +198,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
