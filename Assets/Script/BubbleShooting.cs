@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BubbleShooting : MonoBehaviour
@@ -6,9 +7,9 @@ public class BubbleShooting : MonoBehaviour
     public float shootForce = 10f;
     public float sizeChangeAmount = 0.1f;
     public float minSize = 0.5f;
-    public float maxSize = 2f;z
+    public float maxSize = 2f;
 
-    private float currentSize = 1f;
+    public  float currentSize = 1f;
     private BubbleMovement movement;
     private Collider2D playerCollider;
 
@@ -37,6 +38,7 @@ public class BubbleShooting : MonoBehaviour
         Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
 
         GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
+        bullet.transform.localScale=transform.localScale * currentSize/2;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * shootForce;
 
@@ -54,6 +56,63 @@ public class BubbleShooting : MonoBehaviour
 
         ChangeBubbleSize(-sizeChangeAmount);
     }
+    
+    public void ChangeBubbleSize(float amount)
+    {
+        Debug.Log(amount);
+        
+        currentSize = Mathf.Clamp(currentSize + amount, minSize, maxSize);
+        Debug.Log("valore size" +currentSize );
+        transform.localScale = Vector3.one * currentSize;
+    }
+}
+/* particellare
+using UnityEngine;
+
+public class BubbleShooting : MonoBehaviour
+{
+    public ParticleSystem shootParticleSystem;
+    public float sizeChangeAmount = 0.1f;
+    public float minSize = 0.5f;
+    public float maxSize = 2f;
+
+    private float currentSize = 1f;
+    private BubbleMovement movement;
+    private Collider2D playerCollider;
+
+    void Start()
+    {
+        movement = GetComponent<BubbleMovement>();
+        playerCollider = GetComponent<Collider2D>();
+        currentSize = transform.localScale.x;
+    }
+
+    void Update()
+    {
+        if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
+            (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        Vector2 shootDirection = movement.GetLastDirection();
+        shootDirection.y = 0;
+        shootDirection.Normalize();
+
+        Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
+        
+        if (shootParticleSystem != null)
+        {
+            ParticleSystem instance = Instantiate(shootParticleSystem, shootPosition, Quaternion.LookRotation(shootDirection));
+            instance.Play();
+            Destroy(instance.gameObject, instance.main.duration + instance.main.startLifetime.constantMax);
+        }
+
+        ChangeBubbleSize(-sizeChangeAmount);
+    }
 
     public void ChangeBubbleSize(float amount)
     {
@@ -61,3 +120,4 @@ public class BubbleShooting : MonoBehaviour
         transform.localScale = Vector3.one * currentSize;
     }
 }
+*/

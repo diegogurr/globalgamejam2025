@@ -20,6 +20,9 @@ public class MineController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){	
+			Debug.Log("Funziono " + other.gameObject.GetComponent<BubbleShooting>());
+            
+                other.gameObject.GetComponent<BubbleShooting>().ChangeBubbleSize(1f);
 			
 			Destroy (gameObject);
 			Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation);

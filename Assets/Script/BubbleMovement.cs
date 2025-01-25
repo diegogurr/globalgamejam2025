@@ -68,4 +68,5 @@ public class BubbleMovement : MonoBehaviour
     {
         return lastDirection;
     }
+    
 }

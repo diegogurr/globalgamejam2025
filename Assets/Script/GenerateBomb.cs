@@ -1,14 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
-public class ObjectSpawner : MonoBehaviour
+public class GameInstance : MonoBehaviour
 {
     [SerializeField] GameObject bombBubble;
     [SerializeField] GameObject obstacle;
     [SerializeField] float minDistance = 1.5f; // Distanza minima tra gli oggetti
+    [SerializeField] private GameObject suddenDeathTop;
+    [SerializeField] private GameObject suddenDeathBottom;
+    [SerializeField] private float targetY=6;
+
+
 
     void Start()
     {
+        Time.timeScale=1;
+
         List<Vector3> placedPositions = new List<Vector3>();
 
         // Instanzia le bombBubble
@@ -16,6 +24,31 @@ public class ObjectSpawner : MonoBehaviour
 
         // Instanzia gli obstacle
         SpawnObjects(obstacle, Random.Range(1, 7), placedPositions);
+
+        StartCoroutine(WaitForSuddenDeath(3));
+
+    }
+    IEnumerator WaitForSuddenDeath(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        float startY = suddenDeathTop.transform.position.y;
+    float endY = targetY;  // La posizione finale in Y che vuoi raggiungere
+    float distanceToMove = startY - endY;
+    float moveSpeed = distanceToMove / 30f;  // Movimento in 30 secondi
+
+    // Muove lentamente l'oggetto verso il basso
+    while (suddenDeathTop.transform.position.y > targetY)
+    {
+        suddenDeathTop.transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        suddenDeathBottom.transform.position += Vector3.up * moveSpeed * Time.deltaTime;
+
+        yield return null;  // Aspetta un frame prima di ripetere
+    }
+
+    // Assicurati che l'oggetto arrivi esattamente a targetY
+    suddenDeathTop.transform.position = new Vector3(suddenDeathTop.transform.position.x, targetY, suddenDeathTop.transform.position.z);
+    suddenDeathBottom.transform.position = new Vector3(suddenDeathBottom.transform.position.x, targetY, suddenDeathBottom.transform.position.z);
+
     }
 
     void SpawnObjects(GameObject obj, int count, List<Vector3> placedPositions)
