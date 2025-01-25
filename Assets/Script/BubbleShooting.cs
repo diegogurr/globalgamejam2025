@@ -71,11 +71,7 @@ public class BubbleShooting : MonoBehaviour
     {
         if(maxSizeReached){
             childAnimator.Play("ExplodingFish");
-            Canvas canvas = FindObjectOfType<Canvas>();
-            CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
-            canvasManager.menuButton.gameObject.SetActive(true);
-            canvasManager.winnerText.gameObject.SetActive(true);
-            canvasManager.resetting.gameObject.SetActive(true);
+            endGame();
 
 
         }
@@ -96,7 +92,13 @@ public class BubbleShooting : MonoBehaviour
         
         transform.localScale = Vector3.one * currentSize;
     }
-
+    void endGame(){
+            Canvas canvas = FindObjectOfType<Canvas>();
+            CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
+            canvasManager.menuButton.gameObject.SetActive(true);
+            canvasManager.winnerText.gameObject.SetActive(true);
+            canvasManager.resetting.gameObject.SetActive(true);
+    }
 }
 /* particellare
 using UnityEngine;
