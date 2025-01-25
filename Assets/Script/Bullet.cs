@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
             BubbleShooting hitBubble = other.gameObject.GetComponent<BubbleShooting>();
             if (hitBubble != null)
             {
-                hitBubble.ChangeBubbleSize(owner.sizeChangeAmount);
+                hitBubble.ChangeBubbleSize(+hitBubble.sizeChangeAmount);
                 //owner.ChangeBubbleSize(owner.sizeChangeAmount);
             }
         }

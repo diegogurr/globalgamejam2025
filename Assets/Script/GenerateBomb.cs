@@ -34,7 +34,7 @@ public class GameInstance : MonoBehaviour
         float startY = suddenDeathTop.transform.position.y;
     float endY = targetY;  // La posizione finale in Y che vuoi raggiungere
     float distanceToMove = startY - endY;
-    float moveSpeed = distanceToMove / 30f;  // Movimento in 30 secondi
+    float moveSpeed = distanceToMove / 120f;  // Movimento in 30 secondi
 
     // Muove lentamente l'oggetto verso il basso
     while (suddenDeathTop.transform.position.y > targetY)
