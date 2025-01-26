@@ -32,6 +32,7 @@ public class CanvasManager : MonoBehaviour
 
     }
     public void LoadMenu(){
+        BackgroundMusicManager.instance.StopMusic();
         SceneManager.LoadScene(0);
     }
     public void endGame(string text){
