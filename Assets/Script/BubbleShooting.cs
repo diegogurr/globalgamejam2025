@@ -20,24 +20,38 @@ public class BubbleShooting : MonoBehaviour
     bool maxSizeReached=false;
     Canvas canvas;
     private Rigidbody2D rb;
+    public float chargeSpeed = 5f;
+    public float maxChargeForce = 20f;
+
     
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
+    private float currentCharge = 0f;
+    private bool isCharging = false;
+    SpriteRenderer childSpriteRenderer;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        childAnimator = gameObject.GetComponentInChildren<Animator>();
+    childAnimator = gameObject.GetComponentInChildren<Animator>();
+    childSpriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
 
-            childAnimator.speed = 1;
-        canvas = FindObjectOfType<Canvas>();
+    if (childSpriteRenderer == null)
+    {
+        Debug.LogError("SpriteRenderer non trovato nel GameObject figlio!");
+    }
 
-        movement = GetComponent<BubbleMovement>();
-        playerCollider = GetComponent<Collider2D>();
-        currentSize = transform.localScale.x;            
-        if(movement.isPlayerOne)
+    childAnimator.speed = 1;
+    canvas = FindObjectOfType<Canvas>();
+
+    movement = GetComponent<BubbleMovement>();
+    playerCollider = GetComponent<Collider2D>();
+    currentSize = transform.localScale.x;            
+
+    if (movement.isPlayerOne)
         childAnimator.Play("FishSwimmingYellow");
-        else
+    else
         childAnimator.Play("FishSwimmingRed");
 
 
@@ -45,17 +59,57 @@ public class BubbleShooting : MonoBehaviour
 
     void Update()
     {
-        if ((movement.isPlayerOne && Input.GetButtonDown("Fire1")) ||
-            (!movement.isPlayerOne && Input.GetButtonDown("Fire2")))
+        if (!canShoot || movement.isGameEnded)
+            return;
+
+        if ((movement.isPlayerOne && Input.GetButton("Fire1")) ||
+            (!movement.isPlayerOne && Input.GetButton("Fire2")))
         {
-            if (canShoot && !movement.isGameEnded && Time.time >= nextFireTime)
-            {
-                Shoot();
-                nextFireTime = Time.time + fireRate;
-            }
+            StartCharging();
         }
 
+        if ((movement.isPlayerOne && Input.GetButtonUp("Fire1")) ||
+            (!movement.isPlayerOne && Input.GetButtonUp("Fire2")))
+        {
+            ShootCharged();
+        }
     }
+
+    void StartCharging()
+    {
+        isCharging = true;
+        currentCharge += chargeSpeed * Time.deltaTime;
+        currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeForce);
+
+        float chargeRatio = currentCharge / maxChargeForce;
+        childSpriteRenderer.color = Color.Lerp(Color.white, Color.red, chargeRatio);
+    }
+
+    void ShootCharged()
+    {
+        if (!isCharging) return;
+
+        isCharging = false;
+        Vector2 shootDirection = movement.GetLastDirection();
+        shootDirection.y = 0;
+        shootDirection.Normalize();
+
+        Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
+        GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = shootDirection * (shootForce + currentCharge);
+
+        Collider2D bulletCollider = bullet.GetComponent<Collider2D>();
+        if (bulletCollider != null && playerCollider != null)
+        {
+            Physics2D.IgnoreCollision(bulletCollider, playerCollider);
+        }
+
+        ChangeBubbleSize(-sizeChangeAmount);
+        currentCharge = 0f;
+        childSpriteRenderer.color = Color.white;
+    }
+
 
     void Shoot()
     {
@@ -133,4 +187,4 @@ public class BubbleShooting : MonoBehaviour
         rb.mass = currentSize*massFactor;
     }
       
-}
+}   
