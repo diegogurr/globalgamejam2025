@@ -1391,6 +1391,10 @@ PrefabInstance:
       propertyPath: massFactor
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6595995581591656198, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
+      propertyPath: chargedBulletPrefab
+      value: 
+      objectReference: {fileID: 1243079264059846, guid: 50bba8b6ef55fa246a841b6915bbb3c7, type: 3}
     - target: {fileID: 7660270601376099566, guid: ae646494a6746c74fbe120c73d8745d2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -2251,6 +2255,10 @@ PrefabInstance:
       propertyPath: massFactor
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4250800805515891701, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
+      propertyPath: chargedBulletPrefab
+      value: 
+      objectReference: {fileID: 1243079264059846, guid: 50bba8b6ef55fa246a841b6915bbb3c7, type: 3}
     - target: {fileID: 4994320823249247522, guid: 4fed64199299d1848bee93cae23d636a, type: 3}
       propertyPath: m_BodyType
       value: 0

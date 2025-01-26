@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class BubbleShooting : MonoBehaviour
 {
+    public GameObject chargedBulletPrefab;
     public GameObject bulletPrefab;
+    GameObject bullet;
     public float shootForce = 10f;
     public float sizeChangeAmount = 0.1f;
     public float minSize = 0.5f;
@@ -29,10 +31,11 @@ public class BubbleShooting : MonoBehaviour
     private float currentCharge = 0f;
     private bool isCharging = false;
     SpriteRenderer childSpriteRenderer;
-
+    private bool chargedBullet=false;
 
     void Start()
     {
+        chargedBullet=false;
         rb = GetComponent<Rigidbody2D>();
     childAnimator = gameObject.GetComponentInChildren<Animator>();
     childSpriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
@@ -77,12 +80,20 @@ public class BubbleShooting : MonoBehaviour
 
     void StartCharging()
     {
+        chargedBullet=false;
         isCharging = true;
         currentCharge += chargeSpeed * Time.deltaTime;
         currentCharge = Mathf.Clamp(currentCharge, 0, maxChargeForce);
 
         float chargeRatio = currentCharge / maxChargeForce;
-        childSpriteRenderer.color = Color.Lerp(Color.white, Color.red, chargeRatio);
+        if(movement.isPlayerOne)
+        childSpriteRenderer.color = Color.Lerp(Color.white, new Color(1f, 0.53f, 0f), chargeRatio);
+        else
+        childSpriteRenderer.color = Color.Lerp(Color.white, new Color(0.51f, 0.19f, 1f), chargeRatio);
+        if(chargeRatio==1 && currentSize>=1){
+            Debug.Log("bang");
+            chargedBullet=true;
+        }
     }
 
     void ShootCharged()
@@ -95,7 +106,10 @@ public class BubbleShooting : MonoBehaviour
         shootDirection.Normalize();
 
         Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
-        GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
+        if(chargedBullet)
+        bullet = Instantiate(chargedBulletPrefab, shootPosition, Quaternion.identity);
+        else
+        bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * (shootForce + currentCharge);
 
@@ -104,8 +118,11 @@ public class BubbleShooting : MonoBehaviour
         {
             Physics2D.IgnoreCollision(bulletCollider, playerCollider);
         }
-
+        if(chargedBullet)
+        ChangeBubbleSize(-sizeChangeAmount*5);
+        else
         ChangeBubbleSize(-sizeChangeAmount);
+
         currentCharge = 0f;
         childSpriteRenderer.color = Color.white;
     }
