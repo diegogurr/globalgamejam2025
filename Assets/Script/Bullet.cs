@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
             BubbleShooting hitBubble = other.gameObject.GetComponent<BubbleShooting>();
             if (hitBubble != null)
             {
+                AudioManager.instance.PlaySoundSFX("Inflate");
                 hitBubble.ChangeBubbleSize(+hitBubble.sizeChangeAmount);
                 //owner.ChangeBubbleSize(owner.sizeChangeAmount);
             }

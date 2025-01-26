@@ -59,7 +59,7 @@ public class CanvasManager : MonoBehaviour
             redTransform.anchoredPosition = new Vector2(redTransform.anchoredPosition.x - 60, redTransform.anchoredPosition.y);
         }
         
-        StartCoroutine(Resetting(3));
+        StartCoroutine(Resetting(4));
     }
     IEnumerator Resetting(float waitTime)
     {

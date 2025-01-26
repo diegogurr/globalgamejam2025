@@ -24,20 +24,27 @@ void OnCollisionEnter2D(Collision2D collider)
             collider.gameObject.GetComponentInChildren<Animator>().Play("ExplodingFishRed");
         collider.gameObject.GetComponentInChildren<Animator>().speed =1;
         collider.gameObject.GetComponent<BubbleMovement>().isGameEnded=true;
-        if(collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
-        FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Red"); 
-        else if(!collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
-        FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Yellow"); 
+
+        if (collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
+        {
+            AudioManager.instance.PlaySoundSFX("Siu");
+            FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Red");
+        }
+        else if (!collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
+        {
+            AudioManager.instance.PlaySoundSFX("Ohyeah");
+            FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Yellow");
+        }
 
 
 
         CameraShake.instance.Shake(0.5f, 0.1f);
         AudioManager.instance.PlaySoundSFX("Explosion");
-
+        AudioManager.instance.StopLoopingSound();
     
 
         // Ferma il tempo
-        StartCoroutine(Resetting(3));
+        StartCoroutine(Resetting(4));
         
     }
 }

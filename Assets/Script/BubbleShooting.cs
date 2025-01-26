@@ -110,6 +110,9 @@ public class BubbleShooting : MonoBehaviour
         bullet = Instantiate(chargedBulletPrefab, shootPosition, Quaternion.identity);
         else
         bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
+        
+        AudioManager.instance.PlaySoundSFX("BubbleShoot");
+
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * (shootForce + currentCharge);
 
@@ -185,13 +188,25 @@ public class BubbleShooting : MonoBehaviour
         }else if(maxSizeReached && amount<0){
 
             maxSizeReached=false;
-            if(movement.isPlayerOne)
-            childAnimator.Play("FishSwimmingYellow");
+            if (movement.isPlayerOne)
+            {
+                AudioManager.instance.StopLoopingSound();
+                childAnimator.Play("FishSwimmingYellow");
+            }
             else
-            childAnimator.Play("FishSwimmingRed");
+            {
+                AudioManager.instance.StopLoopingSound();
+                childAnimator.Play("FishSwimmingRed");
+            }
         }
         if(currentSize==maxSize){
             maxSizeReached=true;
+            
+            if(movement.isPlayerOne)
+                AudioManager.instance.PlayLoopingSound("Gorgoglio1");
+            else
+                AudioManager.instance.PlayLoopingSound("Gorgoglio2");
+
             childAnimator.Play("SizeLimit");
 
             childAnimator.speed =1;

@@ -50,6 +50,7 @@ public class BubbleMovement : MonoBehaviour
         {
             rb.linearVelocity=Vector3.zero;
             GetComponent<Collider2D>().enabled = false;
+            AudioManager.instance.StopLoopingSound();
         }
         
     }

@@ -752,13 +752,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48caa10ffc9f2e3488a8eff763697ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minPitch: 0.8
+  maxPitch: 1.2
   sounds:
   - name: Explosion
-    clip: {fileID: 8300000, guid: 00b6ea1a4ab68d54880f9abe58549bd7, type: 3}
+    clip: {fileID: 8300000, guid: aa5815cd70694f242a5ffce1e98fe954, type: 3}
     volume: 0.8
   - name: BubbleShoot
-    clip: {fileID: 8300000, guid: e6211432a715cce48840ff8d038e8e30, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: 47316d3dd21f8df4eb0e360e3e403b74, type: 3}
+    volume: 0.3
+  - name: Inflate
+    clip: {fileID: 8300000, guid: b9b0f1b86104caa4ba44d600030c8691, type: 3}
+    volume: 0.5
+  - name: Gorgoglio1
+    clip: {fileID: 8300000, guid: d378756878a211240a8cc8090d218cf9, type: 3}
+    volume: 0.5
+  - name: Gorgoglio2
+    clip: {fileID: 8300000, guid: 681c4a419d5e6b84a92ea9522efd1b97, type: 3}
+    volume: 0.5
+  - name: Siu
+    clip: {fileID: 8300000, guid: b5eef6b825f6e0f4fb6cb144b2d6f8b9, type: 3}
+    volume: 0.8
+  - name: Ohyeah
+    clip: {fileID: 8300000, guid: 2261d5dcd99fe9c4a9a55f0f0e109ef5, type: 3}
+    volume: 0.8
 --- !u!1 &654216632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 8300000, guid: a117a7cb999f2354d8eb4150a5e036a9, type: 3}
+  volumeTrack: 0.15
 --- !u!4 &771373825
 Transform:
   m_ObjectHideFlags: 0

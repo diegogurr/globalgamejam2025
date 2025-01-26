@@ -5,7 +5,10 @@ public class BackgroundMusicManager : MonoBehaviour
     public static BackgroundMusicManager instance;
     public AudioClip backgroundMusic;
     private AudioSource audioSource;
-
+    
+    [Range(0,1f)]
+    public float volumeTrack;
+    
     void Awake()
     {
         if (instance == null)
@@ -21,7 +24,7 @@ public class BackgroundMusicManager : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = true;
         audioSource.playOnAwake = false;
-        audioSource.volume = 0.5f;
+        audioSource.volume = volumeTrack;
         audioSource.clip = backgroundMusic;
         audioSource.Play();
 
