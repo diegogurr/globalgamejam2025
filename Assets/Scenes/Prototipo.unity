@@ -943,7 +943,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 12.79}
+    oldSize: {x: 19.2, y: 12.8}
     newSize: {x: 19.2, y: 12.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -995,7 +995,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8265585254630345765, guid: 7de3d76ef71ab774fb12416ca05fc850, type: 3}
+  m_Sprite: {fileID: -3004714104533487922, guid: 469ca080968362b4ca3293ea30388fe9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1992,7 +1992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -90, y: 160}
+  m_AnchoredPosition: {x: -80, y: 160}
   m_SizeDelta: {x: 1920, y: 1491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405896047
@@ -2446,6 +2446,7 @@ MonoBehaviour:
   RedImageWin: {fileID: 802638166}
   RedWinCounter: {fileID: 762441516}
   YellowWinCounter: {fileID: 358409858}
+  WinnerText: {fileID: 2138925475}
   menuButton: {fileID: 1246858972}
   CanvasContainer: {fileID: 1623740347}
 --- !u!1 &1911694817
@@ -2709,7 +2710,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 12.79}
+    oldSize: {x: 19.2, y: 12.8}
     newSize: {x: 19.2, y: 12.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2761,7 +2762,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8265585254630345765, guid: 7de3d76ef71ab774fb12416ca05fc850, type: 3}
+  m_Sprite: {fileID: -3004714104533487922, guid: 469ca080968362b4ca3293ea30388fe9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -9,7 +9,9 @@ public class CanvasManager : MonoBehaviour
         public Image RedImageWin;
         
         public TMP_Text RedWinCounter;    
-        public TMP_Text YellowWinCounter;    
+        public TMP_Text YellowWinCounter; 
+        public TMP_Text WinnerText;    
+   
 
         public Button menuButton;
         public GameObject CanvasContainer;
@@ -33,11 +35,9 @@ public class CanvasManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     public void endGame(string text){
-        Debug.Log("Dentro end Game");
         CanvasContainer.SetActive(true);
-
         menuButton.gameObject.SetActive(true);
-        Debug.Log("Loaded");
+        
 
         if(text=="Yellow"){
         YellowImageWin.gameObject.SetActive(true);
@@ -51,7 +51,13 @@ public class CanvasManager : MonoBehaviour
 
         RedWinCounter.gameObject.SetActive(true);
         YellowWinCounter.gameObject.SetActive(true);
-
+        if (YellowImageWin.gameObject.activeSelf && RedImageWin.gameObject.activeSelf)
+        {
+            WinnerText.text = "DRAW";
+            RectTransform redTransform = RedImageWin.GetComponent<RectTransform>();
+            redTransform.anchoredPosition = new Vector2(redTransform.anchoredPosition.x - 60, redTransform.anchoredPosition.y);
+        }
+        
         StartCoroutine(Resetting(3));
     }
     IEnumerator Resetting(float waitTime)
@@ -59,4 +65,5 @@ public class CanvasManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitTime);
         SceneManager.LoadScene(2);
     }
+   
 }
