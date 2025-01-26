@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
     }
     
     public void LoadCredits(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Credits");
     }
     
     public void Quit(){
