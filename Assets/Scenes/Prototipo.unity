@@ -854,6 +854,9 @@ MonoBehaviour:
   - name: Explosion
     clip: {fileID: 8300000, guid: 00b6ea1a4ab68d54880f9abe58549bd7, type: 3}
     volume: 0.8
+  - name: BubbleShoot
+    clip: {fileID: 8300000, guid: e6211432a715cce48840ff8d038e8e30, type: 3}
+    volume: 0.2
 --- !u!1 &654216632
 GameObject:
   m_ObjectHideFlags: 0
