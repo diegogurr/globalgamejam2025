@@ -63,6 +63,7 @@ public class BubbleShooting : MonoBehaviour
         shootDirection.y = 0;
         shootDirection.Normalize();
 
+        
         Vector3 shootPosition = transform.position + (Vector3)shootDirection * (currentSize * 0.6f);
 
         GameObject bullet = Instantiate(bulletPrefab, shootPosition, Quaternion.identity);
@@ -70,6 +71,8 @@ public class BubbleShooting : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.linearVelocity = shootDirection * shootForce;
 
+        AudioManager.instance.PlaySoundSFX("BubbleShoot");
+        
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         if (bulletScript != null)
         {
