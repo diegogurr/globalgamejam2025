@@ -9,8 +9,7 @@ public class CheckWinner : MonoBehaviour
 
 void Start()
 {
-    winnerText.gameObject.SetActive(false);  // Inizialmente disabilita il testo
-    resetting.gameObject.SetActive(false);
+   
     
 }
 
@@ -25,23 +24,17 @@ void OnCollisionEnter2D(Collision2D collider)
             collider.gameObject.GetComponentInChildren<Animator>().Play("ExplodingFishRed");
         collider.gameObject.GetComponentInChildren<Animator>().speed =1;
         collider.gameObject.GetComponent<BubbleMovement>().isGameEnded=true;
-        winnerText.gameObject.SetActive(true);
-        resetting.gameObject.SetActive(true);
-        Canvas canvas = FindObjectOfType<Canvas>();
-        CanvasManager canvasManager = canvas.GetComponent<CanvasManager>();  // Ottieni il CanvasManager dal Canvas
-        canvasManager.menuButton.gameObject.SetActive(true);
+        if(collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
+        FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Red"); 
+        else if(!collider.gameObject.GetComponent<BubbleMovement>().isPlayerOne)
+        FindObjectOfType<Canvas>().GetComponent<CanvasManager>().endGame("Yellow"); 
+
+
 
         CameraShake.instance.Shake(0.5f, 0.1f);
         AudioManager.instance.PlaySoundSFX("Explosion");
 
-        if (playerOne)
-        {
-            winnerText.text = "Giocatore 1 ha vinto";
-        }
-        else
-        {
-            winnerText.text = "Giocatore 2 ha vinto";
-        }
+    
 
         // Ferma il tempo
         StartCoroutine(Resetting(3));

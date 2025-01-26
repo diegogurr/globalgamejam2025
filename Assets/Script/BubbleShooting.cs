@@ -103,9 +103,9 @@ public class BubbleShooting : MonoBehaviour
             childAnimator.speed =1;
             movement.GetComponent<BubbleMovement>().isGameEnded=true;
             if(movement.isPlayerOne)
-            canvas.GetComponent<CanvasManager>().endGame("Player two won");
+            canvas.GetComponent<CanvasManager>().endGame("Red");
             else
-                canvas.GetComponent<CanvasManager>().endGame("Player one won");
+                canvas.GetComponent<CanvasManager>().endGame("Yellow");
 
 
         }else if(maxSizeReached && amount<0){

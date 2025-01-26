@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 021fa6227dcb8bc438c27bfb7e2998fa
+guid: ff87ec7f1e3cce64c841ec2d4d2e3d04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6179328517169894790
-    second: Manta_0
+      213: -2425030085013936299
+    second: UI_Button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Manta_0
+      name: UI_Button_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 10
-        width: 547
-        height: 518
+        x: 7
+        y: 19
+        width: 1698
+        height: 535
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6855a500c8261c550800000000000000
-      internalID: 6179328517169894790
+      spriteID: 557eb1d6cff885ed0800000000000000
+      internalID: -2425030085013936299
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Manta_0: 6179328517169894790
+      UI_Button_0: -2425030085013936299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
