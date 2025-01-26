@@ -804,7 +804,7 @@ Transform:
   m_GameObject: {fileID: 654216632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -11.22, z: 0}
+  m_LocalPosition: {x: 0, y: -11, z: 0}
   m_LocalScale: {x: 0.05, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9acd935997def40b70cf5c78a54c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 8300000, guid: a117a7cb999f2354d8eb4150a5e036a9, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 562f8d7470df97b41b0d8282c937e0a2, type: 3}
   volumeTrack: 0.15
 --- !u!4 &771373825
 Transform:
@@ -2745,7 +2745,7 @@ Transform:
   m_GameObject: {fileID: 2062806290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 11.22, z: 0}
+  m_LocalPosition: {x: 0, y: 11, z: 0}
   m_LocalScale: {x: 0.05, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
