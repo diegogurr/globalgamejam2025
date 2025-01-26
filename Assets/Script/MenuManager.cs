@@ -24,6 +24,9 @@ public class MenuManager : MonoBehaviour
     public void Quit(){
         Application.Quit();
     }
+    public void Tutorial(){
+        SceneManager.LoadScene("Tutorial");
+    }
     
     public void perDiego(){
         SceneManager.LoadScene(2);
